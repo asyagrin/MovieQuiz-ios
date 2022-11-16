@@ -10,10 +10,6 @@ import Foundation
 
 class QuestionFactory: QuestionFactoryProtocol {
     
-    func requestNextQuestion() -> QuizQuestion? {
-            return nil
-        }
-    
     weak var delegate: QuestionFactoryDelegate?
     init(delegate: QuestionFactoryDelegate?) {
         self.delegate = delegate
