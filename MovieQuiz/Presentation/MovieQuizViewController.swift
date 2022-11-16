@@ -20,6 +20,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 20
         
         questionFactory = QuestionFactory(delegate: self)
         questionFactory?.requestNextQuestion()
@@ -115,10 +117,9 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         if isCorrect {
             correctAnswers += 1
         }
-        imageView.layer.masksToBounds = true
+       
         imageView.layer.borderWidth = 8
         imageView.layer.borderColor = isCorrect ? UIColor.ypGreen?.cgColor : UIColor.ypRed?.cgColor
-        imageView.layer.cornerRadius = 20
         setYesAndNoButtonsEnabled(is: false)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             guard let self = self else { return }
