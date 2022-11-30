@@ -45,7 +45,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The Godfather" translatesAutoresizingMaskIntoConstraints="NO" id="j80-Y5-NZ3" userLabel="Preview Image">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j80-Y5-NZ3" userLabel="Preview Image">
                                         <rect key="frame" x="0.0" y="43.5" width="374" height="561"/>
                                         <color key="backgroundColor" name="white"/>
                                         <constraints>
@@ -116,6 +116,9 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-gk-P9A">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jbu-00-SYJ"/>
                         <color key="backgroundColor" name="black"/>
@@ -124,9 +127,12 @@
                             <constraint firstItem="Ydb-Br-hYI" firstAttribute="top" secondItem="jbu-00-SYJ" secondAttribute="top" constant="10" id="mOF-yD-IbV"/>
                             <constraint firstItem="Ydb-Br-hYI" firstAttribute="leading" secondItem="jbu-00-SYJ" secondAttribute="leading" constant="20" id="tvp-9e-u2A"/>
                             <constraint firstItem="jbu-00-SYJ" firstAttribute="trailing" secondItem="Ydb-Br-hYI" secondAttribute="trailing" constant="20" id="uZG-Sz-lAb"/>
+                            <constraint firstItem="Wgq-gk-P9A" firstAttribute="centerY" secondItem="9nO-gE-5TQ" secondAttribute="centerY" id="uqJ-kc-Hc6"/>
+                            <constraint firstItem="Wgq-gk-P9A" firstAttribute="centerX" secondItem="9nO-gE-5TQ" secondAttribute="centerX" id="vxW-hJ-6KL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Wgq-gk-P9A" id="tpW-dF-WNa"/>
                         <outlet property="counterLabel" destination="GrC-oZ-ezF" id="sqH-BP-pQK"/>
                         <outlet property="imageView" destination="j80-Y5-NZ3" id="6gi-Te-n4T"/>
                         <outlet property="noButtonImage" destination="wuP-eT-qGy" id="MIO-fc-wEB"/>
@@ -140,7 +146,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="The Godfather" width="1192" height="1716"/>
         <namedColor name="black">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
